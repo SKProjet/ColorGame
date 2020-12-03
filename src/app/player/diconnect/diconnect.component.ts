@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {PlayerService} from '../player.service';
+import {tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-diconnect',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiconnectComponent implements OnInit {
 
-  constructor() { }
+  constructor(private playerService: PlayerService,
+              private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  logout(): void {
+    this.playerService.disconnect()
+      .pipe(tap(this.cancel.bind(this))).subscribe();
   }
 
+  cancel(): void {
+    this.router.navigateByUrl('/');
+  }
 }

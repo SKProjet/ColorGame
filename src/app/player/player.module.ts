@@ -4,6 +4,7 @@ import { ConnectionComponent } from './connection/connection.component';
 import { DiconnectComponent } from './diconnect/diconnect.component';
 import {RouterModule} from '@angular/router';
 import {PLAYER_ROUTES} from './player.route';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -11,7 +12,8 @@ import {PLAYER_ROUTES} from './player.route';
   declarations: [ConnectionComponent, DiconnectComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(PLAYER_ROUTES)
+    RouterModule.forChild(PLAYER_ROUTES),
+    ReactiveFormsModule
   ],
   exports: []
 })

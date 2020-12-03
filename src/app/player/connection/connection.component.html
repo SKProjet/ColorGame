@@ -1,1 +1,27 @@
-<p>connection works!</p>
+<H1>Connection</H1>
+
+<div [formGroup]="formConnexion">
+    <div>
+      <label> login
+        <input class="form-control" formControlName="login" type="text" placeholder="Login">
+      </label>
+    </div>
+    <div>
+      <label> Passe
+        <input class="form-control" formControlName="passe" type="password" placeholder="Passe">
+      </label>
+    </div>
+    <button class="btn btn-info"
+            (click)="login()"
+            [disabled]="formConnexion.invalid">
+      Connexion
+    </button>
+
+</div>
+
+<div class="alert alert-danger"
+     type="danger"
+     *ngIf="authenticationFailed"
+     (closed)="authenticationFailed = false"
+     >Authentication echec.
+</div>
