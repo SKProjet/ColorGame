@@ -1,3 +1,17 @@
 <h1>Index</h1>
 
-<button type="button" class="btn btn-primary" [routerLink]="['/player/connection']">Connexion</button>
+      <button
+        type="button"
+        *ngIf="connect"
+        class="btn btn-primary"
+        [routerLink]="['/play/start']">
+        Start
+      </button>
+
+      <button
+        type="button"
+        *ngIf="!connect"
+        class="btn btn-primary"
+        [routerLink]="['/player/connection']">
+        Connexion
+      </button>

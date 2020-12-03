@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {PlayerService} from '../player/player.service';
 
 @Component({
   selector: 'app-index',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
-  constructor() { }
+  connect = false;
+
+  constructor(private playerService: PlayerService) { }
 
   ngOnInit(): void {
+    this.playerService.player$
+      .subscribe(player => {
+        if (player){
+          this.connect = true;
+        }});
   }
 
 }
