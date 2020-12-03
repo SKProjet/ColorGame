@@ -10,6 +10,7 @@ import {tap} from 'rxjs/operators';
 })
 export class DiconnectComponent implements OnInit {
 
+  loading = false;
   constructor(private playerService: PlayerService,
               private router: Router) { }
 
@@ -18,6 +19,7 @@ export class DiconnectComponent implements OnInit {
   logout(): void {
     this.playerService.disconnect()
       .pipe(tap(this.cancel.bind(this))).subscribe();
+    this.loading = true;
   }
 
   cancel(): void {

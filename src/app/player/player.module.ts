@@ -5,6 +5,7 @@ import { DiconnectComponent } from './diconnect/diconnect.component';
 import {RouterModule} from '@angular/router';
 import {PLAYER_ROUTES} from './player.route';
 import {ReactiveFormsModule} from '@angular/forms';
+import {FeatureModule} from '../feature/feature.module';
 
 
 
@@ -13,7 +14,8 @@ import {ReactiveFormsModule} from '@angular/forms';
   imports: [
     CommonModule,
     RouterModule.forChild(PLAYER_ROUTES),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FeatureModule
   ],
   exports: []
 })

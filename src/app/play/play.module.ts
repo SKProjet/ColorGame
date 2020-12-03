@@ -6,10 +6,10 @@ import {RouterModule} from '@angular/router';
 import {PLAY_ROUTES} from './play.route';
 
 
-
-
 @NgModule({
-  declarations: [StartComponent, BoxComponent],
+  declarations: [
+    StartComponent,
+    BoxComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(PLAY_ROUTES)
