@@ -4,6 +4,6 @@ import {StartComponent} from './start/start.component';
 
 
 export const PLAY_ROUTES: Routes = [
-  {path: '/play/start', component: StartComponent},
+  {path: 'start', component: StartComponent},
   {path: 'box', component: BoxComponent}
 ];
