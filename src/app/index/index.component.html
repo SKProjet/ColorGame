@@ -1,17 +1,45 @@
 <h1>Index</h1>
+<!--
+      <appIfPlayerDirective>
 
-      <button
-        type="button"
-        *ngIf="connect"
-        class="btn btn-primary"
-        [routerLink]="['/play/start']">
-        Start
-      </button>
+        <button
+          type="button"
+          *ngIf="connect"
+          class="btn btn-primary"
+          [routerLink]="['/play/start']">
+          Start
+        </button>
 
-      <button
-        type="button"
-        *ngIf="!connect"
-        class="btn btn-primary"
-        [routerLink]="['/player/connection']">
-        Connexion
-      </button>
+      </appIfPlayerDirective>
+
+      <appIfNoPlayerDirective>
+
+        <button
+          type="button"
+          *ngIf="!connect"
+          class="btn btn-primary"
+          [routerLink]="['/player/connection']">
+          Connexion
+        </button>
+
+      </appIfNoPlayerDirective>
+
+-->
+        <button
+          type="button"
+          *ngIf="connect"
+          class="btn btn-primary"
+          [routerLink]="['/play/start']">
+          Start
+        </button>
+
+        <button
+          type="button"
+          *ngIf="!connect"
+          class="btn btn-primary"
+          [routerLink]="['/player/connection']">
+          Connexion
+        </button>
+
+
+
